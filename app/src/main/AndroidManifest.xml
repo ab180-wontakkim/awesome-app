@@ -22,14 +22,38 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+            <!-- awesome://launch -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="awesome" android:host="launch" />
+            </intent-filter>
         </activity>
 
         <!-- MAIN -->
         <activity android:name="co.ab180.awesomeapp.ui.main.MainActivity">
+
+            <!-- awesome://main -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="awesome" android:host="main" />
+            </intent-filter>
         </activity>
 
         <!-- DETAILS -->
         <activity android:name="co.ab180.awesomeapp.ui.details.DetailsActivity">
+
+            <!-- awesome://details -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="awesome" android:host="details" />
+            </intent-filter>
         </activity>
 
     </application>
