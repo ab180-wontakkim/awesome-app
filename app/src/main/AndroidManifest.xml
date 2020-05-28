@@ -16,16 +16,22 @@
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning, UnusedAttribute">
 
+        <!-- SPLASH -->
         <activity android:name="co.ab180.awesomeapp.ui.launcher.LauncherActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- MAIN -->
         <activity android:name="co.ab180.awesomeapp.ui.main.MainActivity">
         </activity>
+
+        <!-- DETAILS -->
         <activity android:name="co.ab180.awesomeapp.ui.details.DetailsActivity">
         </activity>
+
     </application>
 
 </manifest>
