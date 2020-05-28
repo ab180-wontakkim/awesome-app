@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary_color">#6200EE</color>
+    <color name="primary_color_dark">#3700B3</color>
+    <color name="accent_color">#03DAC5</color>
+
+    <color name="primary_text_color">#DD000000</color>
+    <color name="secondary_text_color">#99000000</color>
+    <color name="disable_text_color">#60000000</color>
+
+    <color name="divider">@color/black_10</color>
+    <color name="background">#3e4049</color>
+
+    <color name="transparent">#00000000</color>
+
+    <!-- Material palettes -->
+    <color name="white">#ffffff</color>
+    <color name="red_500">#f44336</color>
+    <color name="pink_500">#e91e63</color>
+    <color name="purple_500">#9c27b0</color>
+    <color name="deep_purple_500">#673ab7</color>
+    <color name="indigo_500">#3f51b5</color>
+    <color name="blue_500">#2196f3</color>
+    <color name="light_blue_500">#03a9f4</color>
+    <color name="cyan_500">#00bcd4</color>
+    <color name="teal_500">#009688</color>
+    <color name="green_500">#4caf50</color>
+    <color name="light_green_500">#8bc34a</color>
+    <color name="lime_500">#cddc39</color>
+    <color name="yellow_500">#ffeb3b</color>
+    <color name="amber_500">#ffc107</color>
+    <color name="orange_500">#ff9800</color>
+    <color name="deep_orange_500">#ff5722</color>
+    <color name="brown_500">#795548</color>
+    <color name="grey_500">#9e9e9e</color>
+    <color name="blue_grey_500">#607d8b</color>
+
+    <!-- Opacity -->
+    <color name="opacity_100">#FFFFFFFF</color>
+    <color name="opacity_90">#E6FFFFFF</color>
+    <color name="opacity_80">#CCFFFFFF</color>
+    <color name="opacity_70">#B3FFFFFF</color>
+    <color name="opacity_60">#99FFFFFF</color>
+    <color name="opacity_50">#80FFFFFF</color>
+    <color name="opacity_40">#66FFFFFF</color>
+    <color name="opacity_35">#59FFFFFF</color>
+    <color name="opacity_30">#4DFFFFFF</color>
+    <color name="opacity_20">#33FFFFFF</color>
+    <color name="opacity_10">#1AFFFFFF</color>
+
+    <!-- Black -->
+    <color name="black_100">#FF000000</color>
+    <color name="black_90">#E6000000</color>
+    <color name="black_85">#D8000000</color>
+    <color name="black_80">#CC000000</color>
+    <color name="black_70">#B3000000</color>
+    <color name="black_60">#99000000</color>
+    <color name="black_50">#80000000</color>
+    <color name="black_40">#66000000</color>
+    <color name="black_35">#59000000</color>
+    <color name="black_30">#4D000000</color>
+    <color name="black_20">#33000000</color>
+    <color name="black_15">#26000000</color>
+    <color name="black_10">#1A000000</color>
+    <color name="black_05">#05000000</color>
+</resources>
