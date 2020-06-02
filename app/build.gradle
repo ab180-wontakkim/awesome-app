@@ -35,6 +35,7 @@ dependencies {
     implementation "com.google.android.material:material:1.2.0-alpha06"
     implementation "androidx.core:core-ktx:1.2.0"
     implementation "androidx.constraintlayout:constraintlayout:1.1.3"
+    implementation 'io.airbridge:sdk-android:2.3.1'
 
     implementation "com.squareup.picasso:picasso:2.71828"
     implementation "com.google.code.gson:gson:2.8.6"

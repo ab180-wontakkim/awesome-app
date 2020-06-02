@@ -1,6 +1,5 @@
 package co.ab180.awesomeapp.ui.main
 
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -38,7 +37,7 @@ class ProductViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     init {
         itemView.setOnClickListener {
             val context = itemView.context
-            context.startActivity(DetailsActivity.newIntent(context, target!!))
+            context.startActivity(DetailsActivity.createIntent(context, target!!))
         }
     }
 
