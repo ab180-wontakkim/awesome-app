@@ -11,7 +11,7 @@ import java.util.List;
 import co.ab180.airbridge.Airbridge;
 import co.ab180.airbridge.event.ecommerce.HomeViewEvent;
 import co.ab180.awesomeapp.R;
-import co.ab180.awesomeapp.domain.model.Product;
+import co.ab180.awesomeapp.domain.model.ProductInfo;
 import co.ab180.awesomeapp.network.ApiService;
 
 public class MainActivity extends Activity {
@@ -37,8 +37,8 @@ public class MainActivity extends Activity {
     }
 
     private void initContents() {
-        List<Product> products = ApiService.INSTANCE.getProducts(this);
-        adapter.submitList(products);
+        List<ProductInfo> productInfos = ApiService.INSTANCE.getProducts(this);
+        adapter.submitList(productInfos);
         recyclerView.setAdapter(adapter);
     }
 

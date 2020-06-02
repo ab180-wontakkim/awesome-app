@@ -2,7 +2,7 @@ package co.ab180.awesomeapp.domain.model
 
 import com.google.gson.annotations.SerializedName
 
-data class Product(
+data class ProductInfo(
     @SerializedName("id")
     val id: String,
     @SerializedName("name")

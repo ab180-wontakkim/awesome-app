@@ -8,12 +8,13 @@ import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import co.ab180.airbridge.event.model.Product
 import co.ab180.awesomeapp.R
-import co.ab180.awesomeapp.domain.model.Product
+import co.ab180.awesomeapp.domain.model.ProductInfo
 import co.ab180.awesomeapp.ui.details.DetailsActivity
 import com.squareup.picasso.Picasso
 
-class ProductsAdapter : ListAdapter<Product, ProductViewHolder>(ProductDiffCallback()) {
+class ProductsAdapter : ListAdapter<ProductInfo, ProductViewHolder>(ProductDiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductViewHolder {
         val view = LayoutInflater.from(parent.context)
@@ -32,7 +33,7 @@ class ProductViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     private val nameLabel = itemView.findViewById<TextView>(R.id.nameLabel)
     private val priceLabel = itemView.findViewById<TextView>(R.id.priceLabel)
 
-    private var target: Product? = null
+    private var target: ProductInfo? = null
 
     init {
         itemView.setOnClickListener {
@@ -41,7 +42,7 @@ class ProductViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         }
     }
 
-    fun bind(product: Product) {
+    fun bind(product: ProductInfo) {
         target = product
 
         Picasso.get()
@@ -52,13 +53,13 @@ class ProductViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     }
 }
 
-class ProductDiffCallback : DiffUtil.ItemCallback<Product>() {
+class ProductDiffCallback : DiffUtil.ItemCallback<ProductInfo>() {
 
-    override fun areItemsTheSame(oldItem: Product, newItem: Product): Boolean {
+    override fun areItemsTheSame(oldItem: ProductInfo, newItem: ProductInfo): Boolean {
         return oldItem == newItem
     }
 
-    override fun areContentsTheSame(oldItem: Product, newItem: Product): Boolean {
+    override fun areContentsTheSame(oldItem: ProductInfo, newItem: ProductInfo): Boolean {
         return oldItem.id == newItem.id
     }
 }

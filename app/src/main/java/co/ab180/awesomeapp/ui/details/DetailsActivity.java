@@ -11,8 +11,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import co.ab180.airbridge.Airbridge;
+import co.ab180.airbridge.event.ecommerce.ProductDetailsViewEvent;
+import co.ab180.airbridge.event.model.Product;
 import co.ab180.awesomeapp.R;
-import co.ab180.awesomeapp.domain.model.Product;
+import co.ab180.awesomeapp.domain.model.ProductInfo;
 
 public class DetailsActivity extends AppCompatActivity {
 
@@ -25,12 +31,12 @@ public class DetailsActivity extends AppCompatActivity {
     private TextView nameLabel;
     private TextView priceLabel;
 
-    public static Intent createIntent(Context context, Product product) {
+    public static Intent createIntent(Context context, ProductInfo productInfo) {
         Intent intent = new Intent(context, DetailsActivity.class);
-        intent.putExtra(KEY_ID, product.getId());
-        intent.putExtra(KEY_NAME, product.getName());
-        intent.putExtra(KEY_IMAGE_URL, product.getImageUrl());
-        intent.putExtra(KEY_PRICE, product.getPrice());
+        intent.putExtra(KEY_ID, productInfo.getId());
+        intent.putExtra(KEY_NAME, productInfo.getName());
+        intent.putExtra(KEY_IMAGE_URL, productInfo.getImageUrl());
+        intent.putExtra(KEY_PRICE, productInfo.getPrice());
         return intent;
     }
 
@@ -51,5 +57,26 @@ public class DetailsActivity extends AppCompatActivity {
                 .load(getIntent().getStringExtra(KEY_IMAGE_URL))
                 .into(image);
         priceLabel.setText(getIntent().getStringExtra(KEY_PRICE));
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        sendEvent();
+    }
+
+    private void sendEvent() {
+        List<Product> products = new ArrayList<Product>();
+        Product product = new Product(
+                getIntent().getStringExtra(KEY_ID),
+                getIntent().getStringExtra(KEY_NAME),
+                null,
+                null,
+                null,
+                null
+        );
+        products.add(product);
+        ProductDetailsViewEvent event = new ProductDetailsViewEvent(products);
+        Airbridge.trackEvent(event);
     }
 }
