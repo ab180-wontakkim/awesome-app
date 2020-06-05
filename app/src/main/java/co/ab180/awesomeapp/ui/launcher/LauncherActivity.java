@@ -8,7 +8,6 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import co.ab180.awesomeapp.ui.main.MainActivity;
-import kotlinx.coroutines.GlobalScope;
 
 public class LauncherActivity extends AppCompatActivity {
 
